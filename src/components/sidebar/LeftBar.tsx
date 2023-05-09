@@ -9,7 +9,7 @@ import BaseNav from './BaseNav';
 function LeftBar() {
   return (
     <aside
-      className='w-72 h-screen bg-white border-r border-[#E5E5E5] fixed top-0 left-0 pt-28 px-5'
+      className='hidden md:block w-64  h-screen bg-white border-r border-[#E5E5E5] fixed top-0 left-0 pt-28 px-5'
     >
       <div className='border-b grid text-center py-4'>
         <Connect />

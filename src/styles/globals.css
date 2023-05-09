@@ -53,4 +53,21 @@
     @apply flex text-secondary font-semibold bg-primary border-l-2 border-l-secondary transition-all px-4 py-3;
   }
 
+  .desktop {
+    @apply  md:w-[800px] m-auto pt-28;
+  }
+}
+
+.sponsored {
+  background: linear-gradient(360deg, rgba(16, 24, 40, 0.8) 0%, rgba(16, 24, 40, 0) 100%), url('/sponsored.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sponsored-bg {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(7.5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 100px;
 }
