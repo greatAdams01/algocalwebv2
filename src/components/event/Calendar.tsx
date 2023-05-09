@@ -73,13 +73,13 @@ function Calendar() {
   useEffect(() => {
 
     // Loop through the days of the week and add their dates to the array
-    setWeekDays([])
     for (let i = 0; i < 7; i++) {
       const date = new Date(sunday);
       date.setDate(date.getDate() + i);
       console.log(date.getDate())
       weekDates.push(date.getDate());
-      setWeekDays(weekDates)
+      if(weekDays.length === 7) console.log(weekDays)
+      setWeekDays((prev) => [...prev, date.getDate()  ])
     }
   }, []);
 
@@ -93,9 +93,9 @@ function Calendar() {
         <div className="grid grid-cols-7 gap-2 ">
           {weekDays.map((day, i) => {
             return(
-              <div className={`rounded-md text-center text-sm font-bold`}>
+              <div className={`rounded-md text-center text-sm font-bold`} key={i}>
                 <p className={`${day === date.getDate() ? 'shadow-xl rounded-md' : ''} pt-2 px-2 text-center`}>
-               <small className='text-[#D0D5DD] pb-4'>{days[i]} </small>
+                <small className='text-[#D0D5DD] pb-4'>{days[i]} </small>
                 {day}
                 </p>
               </div>
