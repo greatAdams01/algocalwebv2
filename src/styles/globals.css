@@ -21,7 +21,7 @@
     @apply bg-primary font-inter;
   }
   header {
-    @apply bg-white flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6;
+    @apply bg-white flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6 z-50 fixed border-b;
   }
 
   .container {
@@ -37,4 +37,20 @@
   .rounded-container {
     @apply flex justify-between rounded-3xl bg-primary shadow-sm px-4 py-2;
   }
+  .btn-outline {
+    @apply flex justify-between w-48 px-4 py-3 m-auto rounded-3xl border border-secondary text-secondary font-semibold;
+  }
+
+  .btn-secondary {
+    @apply flex justify-between w-48 px-2 py-3 m-auto rounded-3xl bg-secondary text-white font-semibold;
+  }
+
+  .nav-link {
+    @apply flex text-tertiary font-semibold hover:text-secondary hover:bg-primary hover:border-l-2 border-l-secondary transition-all px-4 py-3;
+  }
+
+  .nav-link-active {
+    @apply flex text-secondary font-semibold bg-primary border-l-2 border-l-secondary transition-all px-4 py-3;
+  }
+
 }
