@@ -1,11 +1,16 @@
 import React from 'react'
+import Calendar from '../event/Calendar'
+import ComingEvents from '../event/ComingEvents'
 
 function RightBar() {
   return (
     <aside
-      className='w-72 h-screen bg-white border-r border-[#E5E5E5] fixed top-0 right-0'
+      className='w-80 h-screen border-r border-[#E5E5E5] fixed top-0 right-0 pt-28 overflow-scroll'
     >
-        <h1>Right</h1>
+        <div className='bg-white py-5 px-4 rounded-lg'>
+          <Calendar />
+          <ComingEvents />
+        </div>
     </aside>
   )
 }
