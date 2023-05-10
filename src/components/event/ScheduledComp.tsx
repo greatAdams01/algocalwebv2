@@ -1,8 +1,7 @@
-
 import { CalendarDaysIcon, ClockIcon, MapPinIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
-import { ShareIcon, BanknotesIcon } from "@heroicons/react/24/solid";
+import { ShareIcon, BanknotesIcon, TrashIcon } from "@heroicons/react/24/solid";
 
-function EventComp() {
+function ScheduledComp() {
   const events = [
     {
       date: '10 Jan',
@@ -22,8 +21,8 @@ function EventComp() {
     }
   ]
   return (
-    <div className='mt-5 md:w-[750px]'>
-     {
+    <div className="mt-5 md:w-[750px]">
+      {
         events.map((event, i) => {
           return(
             <>
@@ -35,16 +34,19 @@ function EventComp() {
                   <p className="flex py-1"> <ClockIcon className="w-8 pr-2" />{event.time} </p>
                   <p className="flex py-1"> <MapPinIcon className="w-8 pr-2" />{event.location} </p>
                   <p className="flex py-1"> <ClockIcon className="w-8 pr-2" />{event.duration} </p>
-                  <p className="flex py-1"> <CurrencyDollarIcon className="w-8 pr-2" />{event.price} </p>
+
                   <div className="flex mt-10 space-x-6">
+                  <button className='h-10 w-28 p-2 bg-primary rounded-full mt-2'>
+                      <p className="text-secondary">Price: {event.price}</p>
+                    </button>
                     <button className='h-10 w-10 p-2 bg-primary rounded-full mt-2'>
                       <ShareIcon className='w-6 text-secondary' />
                     </button>
                     <button className='h-10 w-10 p-2 bg-primary rounded-full mt-2'>
                       <BanknotesIcon className='w-6 text-secondary' />
                     </button>
-                    <button className="bg-secondary text-white px-5 py-3 rounded-full">
-                      Add To Schedule
+                    <button className='h-10 w-10 p-2 bg-primary rounded-full mt-2'>
+                      <TrashIcon className='w-6 text-secondary' />
                     </button>
                   </div>
                 </div>
@@ -57,4 +59,4 @@ function EventComp() {
   )
 }
 
-export default EventComp
+export default ScheduledComp

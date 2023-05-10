@@ -23,20 +23,20 @@ function BaseNav() {
           </Link>
         </li>
         <li className='my-3'>
-          <Link className='nav-link' href='/'>
+          <Link className={ router.asPath.includes('scheduled') ?  'nav-link-active' : 'nav-link' } href='/scheduled'>
             <CalendarDaysIcon className='w-6 mr-5' />
             Scheduled Event
           </Link>
         </li>
         <li className='my-3'>
-          <Link className='nav-link' href='/'>
+          <Link className={ router.asPath.includes('account') ?  'nav-link-active' : 'nav-link' } href='/account'>
             <UserCircleIcon className='w-6 mr-5' />
             My Account
           </Link>
         </li>
 
         <li className='my-3'>
-          <Link className='nav-link' href='/'>
+          <Link className={ router.asPath.includes('services') ?  'nav-link-active' : 'nav-link' } href='/services'>
             <ArrowPathIcon className='w-6 mr-5' />
             Services
           </Link>
