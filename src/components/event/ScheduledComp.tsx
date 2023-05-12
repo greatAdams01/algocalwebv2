@@ -26,10 +26,10 @@ function ScheduledComp() {
         events.map((event, i) => {
           return(
             <>
-               <div className='flex space-x-8 my-5 py-5 px-5 bg-white rounded-md' key={i}>
+               <div className='md:flex md:space-x-8 my-5 py-5 px-5 bg-white rounded-md' key={i}>
                 <img className='w-96 rounded-md' src='https://picsum.photos/200/300' />
                 <div className="">
-                  <h1 className='font-semibold text-[24px] lg:w-[400px]'>{event.title}</h1>
+                  <h1 className='font-semibold  pt-5 text-[18px] lg:text-[24px] lg:w-[400px]'>{event.title}</h1>
                   <p className="flex py-1 mt-5"> <CalendarDaysIcon className="w-8 pr-2" />{event.date} </p>
                   <p className="flex py-1"> <ClockIcon className="w-8 pr-2" />{event.time} </p>
                   <p className="flex py-1"> <MapPinIcon className="w-8 pr-2" />{event.location} </p>

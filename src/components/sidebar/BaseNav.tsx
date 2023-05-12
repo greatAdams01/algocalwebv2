@@ -8,7 +8,7 @@ function BaseNav() {
   const router = useRouter();
   return (
     <div>
-      <ul className='mt-10'>
+      <ul className='mt-20 lg:mt-10'>
 
         <li className='my-3'>
           <Link className={ router.asPath === '/' ? 'nav-link-active' : 'nav-link' } href='/'>

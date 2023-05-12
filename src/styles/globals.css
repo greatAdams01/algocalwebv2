@@ -21,7 +21,7 @@
     @apply bg-primary font-inter;
   }
   header {
-    @apply bg-white flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6 z-50 fixed border-b;
+    @apply w-full bg-white lg:w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6 z-50 fixed border-b;
   }
 
   .container {
@@ -42,7 +42,7 @@
   }
 
   .btn-secondary {
-    @apply flex justify-between w-48 px-2 py-3 m-auto rounded-3xl bg-secondary text-white font-semibold;
+    @apply flex justify-around w-48 px-4 py-3 m-auto rounded-3xl bg-secondary text-white font-semibold;
   }
 
   .nav-link {
@@ -54,7 +54,7 @@
   }
 
   .desktop {
-    @apply  md:w-[800px] m-auto pt-28;
+    @apply mx-4 md:w-[800px] lg:m-auto pt-20 md:pt-28;
   }
 }
 

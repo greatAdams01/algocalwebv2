@@ -3,7 +3,7 @@ import { MagnifyingGlassIcon, BellIcon } from "@heroicons/react/24/outline";
 
 function Header() {
   return (
-    <header className='text-black pa'>
+    <header className='text-black pa hidden lg:flex'>
       <div className='flex justify-between w-full'>
         <h1 className='text-[20px] font-bold'>Algocal</h1>
         <div className='flex'>
